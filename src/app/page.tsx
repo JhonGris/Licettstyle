@@ -1,7 +1,10 @@
 import Image from "next/image";
-import { collections, featuredProducts, whatsappUrl } from "@/lib/site-data";
+import { getSiteContent } from "@/lib/google-sheets";
+import { whatsappUrl } from "@/lib/site-data";
 
-export default function Home() {
+export default async function Home() {
+  const { collections, featuredProducts } = await getSiteContent();
+
   return (
     <main>
       <header className="fixed inset-x-0 top-0 z-20 border-b border-white/35 bg-white/75 backdrop-blur-xl">

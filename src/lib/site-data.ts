@@ -1,7 +1,26 @@
 export const whatsappUrl =
   "https://wa.me/5703169739942?text=Hola%20Licett%20Style%2C%20quiero%20ver%20la%20colecci%C3%B3n";
 
-export const collections = [
+export type Collection = {
+  name: string;
+  description: string;
+  image: string;
+};
+
+export type FeaturedProduct = {
+  name: string;
+  category: string;
+  price: string;
+  status: string;
+};
+
+export type AdminMetric = {
+  label: string;
+  value: string;
+  change: string;
+};
+
+export const collections: Collection[] = [
   {
     name: "Satinadas",
     description: "Brillo suave, caida elegante y colores listos para regalo.",
@@ -28,7 +47,7 @@ export const collections = [
   },
 ];
 
-export const featuredProducts = [
+export const featuredProducts: FeaturedProduct[] = [
   {
     name: "Set Lavanda Satin",
     category: "Satinadas",
@@ -49,7 +68,7 @@ export const featuredProducts = [
   },
 ];
 
-export const adminMetrics = [
+export const adminMetrics: AdminMetric[] = [
   { label: "Visitas", value: "1.248", change: "+18%" },
   { label: "Clicks WhatsApp", value: "186", change: "+31%" },
   { label: "Productos consultados", value: "73", change: "+12%" },

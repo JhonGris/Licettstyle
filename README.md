@@ -7,6 +7,8 @@ Landing page para Licett Style, una marca de pijamas femeninas en Cali orientada
 - Email: `licettstyle@gmail.com`
 - WhatsApp: `+5703169739942`
 - GitHub remoto: `https://github.com/JhonGris/Licettstyle.git`
+- Google Sheet: `https://docs.google.com/spreadsheets/d/1ee_1YHyeTkaILri8qKyk35So2mocTfr-RsYS3LEcCGo/edit`
+- Cloudinary cloud name: `dj7ij0oss`
 
 ## Rutas
 
@@ -20,6 +22,18 @@ Landing page para Licett Style, una marca de pijamas femeninas en Cali orientada
 - Tailwind CSS
 - Vercel
 - Google Sheets y Cloudinary como integraciones planeadas
+
+## Integraciones
+
+La app intenta leer datos publicos desde Google Sheets por CSV. Si las pestañas no existen o no tienen el formato esperado, usa datos de ejemplo.
+
+Pestañas esperadas:
+
+- `PRODUCTOS`: `nombre`, `categoria`, `precio`, `estado`
+- `COLECCIONES`: `nombre`, `descripcion`, `imagen`
+- `ANALYTICS`: `metrica`, `valor`, `cambio`
+
+Cloudinary se configura con variables de entorno y se inicializa de forma perezosa en servidor.
 
 ## Getting Started
 

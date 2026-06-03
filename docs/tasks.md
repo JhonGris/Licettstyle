@@ -16,11 +16,26 @@
 - [ ] Crear seccion de promociones.
 - [ ] Agregar FAQ corta.
 
+## Google Sheets
+
+- [x] Registrar ID de spreadsheet de Licett Style.
+- [x] Crear lector publico CSV con fallback a datos de ejemplo.
+- [ ] Dar permiso al conector de Google Drive para editar la hoja.
+- [ ] Crear pestañas reales: PRODUCTOS, COLECCIONES, CONFIG_VISUAL, BANNERS, ANALYTICS, PROMOCIONES, FAQ.
+- [ ] Definir encabezados por pestaña.
+
+## Cloudinary
+
+- [x] Instalar paquete `cloudinary`.
+- [x] Crear helper server-side con inicializacion perezosa.
+- [ ] Configurar `CLOUDINARY_API_SECRET` en `.env.local` y Vercel.
+- [ ] Subir imagenes reales de productos.
+- [ ] Guardar `public_id` o URL optimizada en Google Sheets.
+
 ## Admin
 
-- [ ] Conectar Google Sheets como CMS.
-- [ ] Crear tablas: PRODUCTOS, COLECCIONES, CONFIG_VISUAL, BANNERS, ANALYTICS, PROMOCIONES, FAQ.
-- [ ] Conectar Cloudinary para imagenes.
+- [x] Conectar Google Sheets como CMS de lectura con fallback.
+- [x] Preparar Cloudinary para imagenes.
 - [ ] Proteger `/admin` con autenticacion simple.
 - [ ] Crear selector de tema visual.
 

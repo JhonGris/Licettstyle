@@ -1,7 +1,11 @@
 import Link from "next/link";
-import { adminMetrics, featuredProducts } from "@/lib/site-data";
+import { getSiteContent } from "@/lib/google-sheets";
+import { hasCloudinaryConfig } from "@/lib/cloudinary";
 
-export default function AdminPage() {
+export default async function AdminPage() {
+  const { adminMetrics, featuredProducts, source } = await getSiteContent();
+  const cloudinaryReady = hasCloudinaryConfig();
+
   return (
     <main className="min-h-screen bg-[#f6f1ee] px-5 py-6 text-ink sm:px-8">
       <div className="mx-auto max-w-7xl">
@@ -16,6 +20,14 @@ export default function AdminPage() {
               En la siguiente etapa se conecta con Google Sheets, Cloudinary y
               eventos de analytics.
             </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+              <span className="rounded-full bg-white px-3 py-1 text-rose">
+                Datos: {source === "google-sheets" ? "Google Sheets" : "Ejemplo"}
+              </span>
+              <span className="rounded-full bg-white px-3 py-1 text-rose">
+                Cloudinary: {cloudinaryReady ? "Configurado" : "Pendiente"}
+              </span>
+            </div>
           </div>
           <Link
             className="inline-flex h-11 items-center justify-center rounded-full bg-ink px-5 text-sm font-semibold text-white"
