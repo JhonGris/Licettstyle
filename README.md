@@ -2,6 +2,12 @@
 
 Landing page para Licett Style, una marca de pijamas femeninas en Cali orientada a venta por WhatsApp.
 
+## Datos de marca
+
+- Email: `licettstyle@gmail.com`
+- WhatsApp: `+5703169739942`
+- GitHub remoto: `https://github.com/JhonGris/Licettstyle.git`
+
 ## Rutas
 
 - `/`: landing publica.

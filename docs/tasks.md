@@ -11,7 +11,7 @@
 ## Landing
 
 - [ ] Reemplazar imagenes de referencia por fotos reales de productos.
-- [ ] Definir numero real de WhatsApp Business.
+- [x] Definir numero real de WhatsApp Business.
 - [ ] Ajustar textos finales de colecciones.
 - [ ] Crear seccion de promociones.
 - [ ] Agregar FAQ corta.
@@ -35,7 +35,7 @@
 
 ## Deploy
 
-- [ ] Crear repositorio privado `JhonGris/licett-style`.
+- [x] Crear repositorio remoto `JhonGris/Licettstyle`.
 - [ ] Conectar repo a Vercel.
 - [ ] Crear variables de entorno.
 - [ ] Comprar o conectar dominio.

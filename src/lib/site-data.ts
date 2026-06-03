@@ -1,5 +1,5 @@
 export const whatsappUrl =
-  "https://wa.me/573001112233?text=Hola%20Licett%20Style%2C%20quiero%20ver%20la%20colecci%C3%B3n";
+  "https://wa.me/5703169739942?text=Hola%20Licett%20Style%2C%20quiero%20ver%20la%20colecci%C3%B3n";
 
 export const collections = [
   {
