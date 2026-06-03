@@ -1,0 +1,4 @@
+id,nombre,categoria,descripcion,precio,precio_anterior,estado,destacado,stock,imagen,orden,activo,whatsapp_texto
+prod-001,Set Lavanda Satin,Satinadas,Set satinado suave en tono lavanda para descanso elegante,$89.000,,Nuevo,SI,Disponible,https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=900&q=85,1,SI,Hola Licett Style quiero informacion del Set Lavanda Satin
+prod-002,Pijama Nude Algodon,Algodon,Pijama fresca de algodon para clima caleno,$72.000,,Mas consultado,SI,Disponible,https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85,2,SI,Hola Licett Style quiero informacion de la Pijama Nude Algodon
+prod-003,Short Arena,Shorts,Set corto ligero para descanso diario,$58.000,$65.000,Promo,SI,Pocas unidades,https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85,3,SI,Hola Licett Style quiero informacion del Short Arena

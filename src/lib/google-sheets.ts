@@ -46,25 +46,33 @@ async function getCollections(): Promise<Collection[]> {
   const rows = await getSheetObjects("COLECCIONES");
 
   return rows
+    .filter(isActive)
     .map((row) => ({
+      order: Number(row.orden || 0),
       name: row.name || row.nombre,
       description: row.description || row.descripcion,
       image: row.image || row.imagen,
     }))
-    .filter((collection) => collection.name && collection.image);
+    .filter((collection) => collection.name && collection.image)
+    .sort(byOrder)
+    .map(stripOrder);
 }
 
 async function getProducts(): Promise<FeaturedProduct[]> {
   const rows = await getSheetObjects("PRODUCTOS");
 
   return rows
+    .filter(isActive)
     .map((row) => ({
+      order: Number(row.orden || 0),
       name: row.name || row.nombre || row.producto,
       category: row.category || row.categoria,
       price: row.price || row.precio,
       status: row.status || row.estado || "Disponible",
     }))
-    .filter((product) => product.name && product.price);
+    .filter((product) => product.name && product.price)
+    .sort(byOrder)
+    .map(stripOrder);
 }
 
 async function getMetrics(): Promise<AdminMetric[]> {
@@ -77,6 +85,22 @@ async function getMetrics(): Promise<AdminMetric[]> {
       change: row.change || row.cambio || "",
     }))
     .filter((metric) => metric.label && metric.value);
+}
+
+function isActive(row: Record<string, string>) {
+  const value = row.activo || row.active;
+
+  return !value || ["si", "true", "1", "activo", "yes"].includes(value.toLowerCase());
+}
+
+function byOrder(first: { order: number }, second: { order: number }) {
+  return first.order - second.order;
+}
+
+function stripOrder<T extends { order: number }>(item: T): Omit<T, "order"> {
+  const { order: _order, ...rest } = item;
+  void _order;
+  return rest;
 }
 
 async function getSheetObjects(sheetName: string) {

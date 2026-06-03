@@ -20,6 +20,8 @@
 
 - [x] Registrar ID de spreadsheet de Licett Style.
 - [x] Crear lector publico CSV con fallback a datos de ejemplo.
+- [x] Definir estructura profesional de pestañas y columnas.
+- [x] Crear CSVs plantilla para importar/copiar en Google Sheets.
 - [ ] Dar permiso al conector de Google Drive para editar la hoja.
 - [ ] Crear pestañas reales: PRODUCTOS, COLECCIONES, CONFIG_VISUAL, BANNERS, ANALYTICS, PROMOCIONES, FAQ.
 - [ ] Definir encabezados por pestaña.

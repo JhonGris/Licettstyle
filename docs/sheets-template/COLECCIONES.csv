@@ -1,0 +1,5 @@
+id,nombre,descripcion,imagen,orden,activo
+col-001,Satinadas,Brillo suave caida elegante y colores listos para regalo,https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?auto=format&fit=crop&w=900&q=85,1,SI
+col-002,Algodon,Piezas frescas para dormir comoda en clima caleno,https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85,2,SI
+col-003,Shorts,Sets ligeros para descanso diario y fines de semana,https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85,3,SI
+col-004,Premium,Detalles finos tonos tranquilos y sensacion de bienestar,https://images.unsplash.com/photo-1520975661595-6453be3f7070?auto=format&fit=crop&w=900&q=85,4,SI

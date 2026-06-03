@@ -1,0 +1,3 @@
+id,nombre,descripcion,tipo,valor,fecha_inicio,fecha_fin,codigo,orden,activo
+promo-001,Combo descanso,Lleva dos pijamas seleccionadas con precio especial,combo,2x precio especial,2026-06-01,2026-06-30,COMBO2,1,SI
+promo-002,Envio Cali,Envio local con tarifa preferencial,envio,Consultar por zona,2026-06-01,2026-12-31,CALI,2,SI
