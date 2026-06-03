@@ -1,6 +1,6 @@
 # Estructura profesional de Google Sheets
 
-Spreadsheet: https://docs.google.com/spreadsheets/d/1ee_1YHyeTkaILri8qKyk35So2mocTfr-RsYS3LEcCGo/edit
+Spreadsheet: https://docs.google.com/spreadsheets/d/1k89uYizzD5b8WO52CH774AGiV0PZHKYNuOp_c6oaAwc/edit
 
 ## Reglas generales
 

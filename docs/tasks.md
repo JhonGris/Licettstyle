@@ -22,9 +22,9 @@
 - [x] Crear lector publico CSV con fallback a datos de ejemplo.
 - [x] Definir estructura profesional de pestañas y columnas.
 - [x] Crear CSVs plantilla para importar/copiar en Google Sheets.
-- [ ] Dar permiso al conector de Google Drive para editar la hoja.
-- [ ] Crear pestañas reales: PRODUCTOS, COLECCIONES, CONFIG_VISUAL, BANNERS, ANALYTICS, PROMOCIONES, FAQ.
-- [ ] Definir encabezados por pestaña.
+- [x] Dar permiso al conector de Google Drive para editar la hoja.
+- [x] Crear pestañas reales: PRODUCTOS, COLECCIONES, CONFIG_VISUAL, BANNERS, ANALYTICS, PROMOCIONES, FAQ.
+- [x] Definir encabezados por pestaña.
 
 ## Cloudinary
 

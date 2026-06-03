@@ -11,7 +11,7 @@ export function GET() {
       configured: Boolean(process.env.GOOGLE_SHEETS_SPREADSHEET_ID),
       spreadsheetId:
         process.env.GOOGLE_SHEETS_SPREADSHEET_ID ??
-        "1ee_1YHyeTkaILri8qKyk35So2mocTfr-RsYS3LEcCGo",
+        "1k89uYizzD5b8WO52CH774AGiV0PZHKYNuOp_c6oaAwc",
     },
   });
 }
