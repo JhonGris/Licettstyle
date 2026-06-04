@@ -21,6 +21,7 @@ const spreadsheetId =
   "1k89uYizzD5b8WO52CH774AGiV0PZHKYNuOp_c6oaAwc";
 
 const publicCsvBase = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:csv`;
+const sheetFetchTimeoutMs = 3500;
 
 export type SiteContent = {
   collections: Collection[];
@@ -213,12 +214,16 @@ function stripOrder<T extends { order: number }>(item: T): Omit<T, "order"> {
 
 async function getSheetObjects(sheetName: string) {
   try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), sheetFetchTimeoutMs);
     const response = await fetch(
       `${publicCsvBase}&sheet=${encodeURIComponent(sheetName)}`,
       {
         next: { revalidate: 300 },
+        signal: controller.signal,
       },
     );
+    clearTimeout(timeout);
 
     if (!response.ok) {
       return [];
