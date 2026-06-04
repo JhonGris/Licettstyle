@@ -13,8 +13,8 @@
 - [ ] Reemplazar imagenes de referencia por fotos reales de productos.
 - [x] Definir numero real de WhatsApp Business.
 - [ ] Ajustar textos finales de colecciones.
-- [ ] Crear seccion de promociones.
-- [ ] Agregar FAQ corta.
+- [x] Crear seccion de promociones.
+- [x] Agregar FAQ corta.
 
 ## Google Sheets
 
@@ -38,6 +38,7 @@
 
 - [x] Conectar Google Sheets como CMS de lectura con fallback.
 - [x] Preparar Cloudinary para imagenes.
+- [x] Mostrar resumen de promociones y FAQ en admin.
 - [ ] Proteger `/admin` con autenticacion simple.
 - [ ] Crear selector de tema visual.
 

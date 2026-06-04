@@ -3,7 +3,14 @@ import { getSiteContent } from "@/lib/google-sheets";
 import { hasCloudinaryConfig } from "@/lib/cloudinary";
 
 export default async function AdminPage() {
-  const { adminMetrics, featuredProducts, source } = await getSiteContent();
+  const {
+    adminMetrics,
+    config,
+    faqItems,
+    featuredProducts,
+    promotions,
+    source,
+  } = await getSiteContent();
   const cloudinaryReady = hasCloudinaryConfig();
 
   return (
@@ -86,22 +93,40 @@ export default async function AdminPage() {
 
           <aside className="rounded-lg border border-line bg-white p-5">
             <h2 className="text-xl font-semibold">Tema activo</h2>
+            <p className="mt-2 text-sm leading-6 text-muted">
+              Controlado desde `CONFIG_VISUAL` en Google Sheets.
+            </p>
             <div className="mt-5 grid gap-3">
               {["Nude", "Lavanda", "Azul Cielo", "Navidad", "Madres"].map(
-                (theme, index) => (
+                (theme) => (
                   <div
                     className="flex items-center justify-between rounded-lg border border-line p-4"
                     key={theme}
                   >
                     <span className="font-medium">{theme}</span>
                     <span className="text-sm text-muted">
-                      {index === 0 ? "Activo" : "Disponible"}
+                      {theme === config.theme ? "Activo" : "Disponible"}
                     </span>
                   </div>
                 ),
               )}
             </div>
           </aside>
+        </section>
+
+        <section className="grid gap-5 py-5 md:grid-cols-2">
+          <article className="rounded-lg border border-line bg-white p-5">
+            <h2 className="text-xl font-semibold">Promociones</h2>
+            <p className="mt-2 text-sm text-muted">
+              {promotions.length} promociones activas desde Google Sheets.
+            </p>
+          </article>
+          <article className="rounded-lg border border-line bg-white p-5">
+            <h2 className="text-xl font-semibold">FAQ</h2>
+            <p className="mt-2 text-sm text-muted">
+              {faqItems.length} preguntas activas para la landing.
+            </p>
+          </article>
         </section>
       </div>
     </main>

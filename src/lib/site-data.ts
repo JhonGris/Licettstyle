@@ -20,6 +20,91 @@ export type AdminMetric = {
   change: string;
 };
 
+export type SiteConfig = {
+  theme: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  primaryCta: string;
+  secondaryCta: string;
+  city: string;
+};
+
+export type Banner = {
+  title: string;
+  subtitle: string;
+  image: string;
+  ctaText: string;
+  ctaUrl: string;
+  location: string;
+};
+
+export type Promotion = {
+  name: string;
+  description: string;
+  type: string;
+  value: string;
+  code: string;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export const siteConfig: SiteConfig = {
+  theme: "Nude",
+  heroTitle: "Descansa con estilo",
+  heroSubtitle:
+    "Pijamas femeninas con telas suaves, colores tranquilos y compra directa por WhatsApp.",
+  primaryCta: "Comprar por WhatsApp",
+  secondaryCta: "Ver coleccion",
+  city: "Cali",
+};
+
+export const banners: Banner[] = [
+  {
+    title: "Nueva coleccion satinada",
+    subtitle: "Tonos suaves para regalar o descansar con estilo",
+    image:
+      "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=1800&q=88",
+    ctaText: "Ver coleccion",
+    ctaUrl: "#colecciones",
+    location: "hero",
+  },
+];
+
+export const promotions: Promotion[] = [
+  {
+    name: "Combo descanso",
+    description: "Lleva dos pijamas seleccionadas con precio especial.",
+    type: "combo",
+    value: "2x precio especial",
+    code: "COMBO2",
+  },
+  {
+    name: "Envio Cali",
+    description: "Envio local con tarifa preferencial.",
+    type: "envio",
+    value: "Consultar por zona",
+    code: "CALI",
+  },
+];
+
+export const faqItems: FaqItem[] = [
+  {
+    question: "Hacen domicilio en Cali?",
+    answer: "Si, coordinamos domicilio por WhatsApp segun la zona.",
+  },
+  {
+    question: "Como puedo comprar?",
+    answer: "Elige la referencia y escribenos para confirmar talla, color y disponibilidad.",
+  },
+  {
+    question: "Que medios de pago reciben?",
+    answer: "Inicialmente transferencia y pago acordado por WhatsApp.",
+  },
+];
+
 export const collections: Collection[] = [
   {
     name: "Satinadas",
