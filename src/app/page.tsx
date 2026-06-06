@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { HeroCarousel } from "@/components/hero-carousel";
 import { getSiteContent } from "@/lib/google-sheets";
 import { whatsappUrl } from "@/lib/site-data";
 
@@ -12,7 +13,7 @@ export default async function Home() {
     featuredProducts,
     promotions,
   } = await getSiteContent();
-  const heroBanner = banners.find((banner) => banner.location === "hero") ?? banners[0];
+  const heroBanners = banners.filter((banner) => banner.location === "hero");
 
   return (
     <main>
@@ -37,44 +38,11 @@ export default async function Home() {
         </nav>
       </header>
 
-      <section className="relative min-h-[92svh] overflow-hidden bg-surface-soft pt-16">
-        <Image
-          src={heroBanner.image}
-          alt={heroBanner.title}
-          fill
-          priority
-          className="object-contain object-right-bottom"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,250,248,0.98)_0%,rgba(255,250,248,0.84)_38%,rgba(255,250,248,0.18)_72%)]" />
-        <div className="relative mx-auto flex min-h-[calc(92svh-4rem)] max-w-7xl items-center px-5 py-16 sm:px-8">
-          <div className="max-w-xl">
-            <p className="mb-5 text-sm font-medium uppercase tracking-[0.28em] text-rose">
-              Pijamas en {config.city}
-            </p>
-            <h1 className="text-5xl font-semibold leading-[0.95] text-ink sm:text-7xl">
-              {config.heroTitle}
-            </h1>
-            <p className="mt-6 max-w-md text-lg leading-8 text-muted">
-              {config.heroSubtitle}
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                className="inline-flex h-12 items-center justify-center rounded-full bg-ink px-7 text-sm font-semibold text-white transition hover:bg-rose"
-                href={whatsappUrl}
-              >
-                {config.primaryCta}
-              </a>
-              <a
-                className="inline-flex h-12 items-center justify-center rounded-full border border-ink/20 bg-white/70 px-7 text-sm font-semibold text-ink transition hover:border-rose hover:text-rose"
-                href={heroBanner.ctaUrl || "#colecciones"}
-              >
-                {config.secondaryCta}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroCarousel
+        config={config}
+        slides={heroBanners.length > 0 ? heroBanners : banners}
+        whatsappUrl={whatsappUrl}
+      />
 
       <section id="colecciones" className="mx-auto max-w-7xl px-5 py-18 sm:px-8">
         <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
