@@ -158,7 +158,7 @@ async function getBanners(): Promise<Banner[]> {
       ctaUrl: row.cta_url || row.url || "#colecciones",
       location: row.ubicacion || row.location || "promo_home",
     }))
-    .filter((banner) => banner.title && banner.image)
+    .filter((banner) => banner.title && isValidImageUrl(banner.image))
     .sort(byOrder)
     .map(stripOrder);
 }
@@ -204,6 +204,15 @@ function isActive(row: Record<string, string>) {
 
 function byOrder(first: { order: number }, second: { order: number }) {
   return first.order - second.order;
+}
+
+function isValidImageUrl(value: string) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
+  }
 }
 
 function stripOrder<T extends { order: number }>(item: T): Omit<T, "order"> {
