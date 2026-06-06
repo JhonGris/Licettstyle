@@ -37,16 +37,16 @@ export default async function Home() {
         </nav>
       </header>
 
-      <section className="relative min-h-[92svh] overflow-hidden pt-16">
+      <section className="relative min-h-[92svh] overflow-hidden bg-surface-soft pt-16">
         <Image
           src={heroBanner.image}
           alt={heroBanner.title}
           fill
           priority
-          className="object-cover object-[58%_center]"
+          className="object-contain object-right-bottom"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,250,248,0.95)_0%,rgba(255,250,248,0.72)_38%,rgba(255,250,248,0.12)_72%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,250,248,0.98)_0%,rgba(255,250,248,0.84)_38%,rgba(255,250,248,0.18)_72%)]" />
         <div className="relative mx-auto flex min-h-[calc(92svh-4rem)] max-w-7xl items-center px-5 py-16 sm:px-8">
           <div className="max-w-xl">
             <p className="mb-5 text-sm font-medium uppercase tracking-[0.28em] text-rose">
